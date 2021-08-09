@@ -147,7 +147,7 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   background-color: #c8e6de;
-  color: #171715;
+  color: #fff;
   -webkit-overflow-scrolling: touch;
   background-attachment: fixed;
 }
