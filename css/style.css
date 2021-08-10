@@ -1664,6 +1664,10 @@ pre .javascript .function {
 .footer-right {
   float: right;
 }
+#sitetime {
+  color: #ffa500;
+  font-weight: 700;
+}
 #page-nav {
   text-align: center;
   margin-top: 30px;
