@@ -91,7 +91,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/git/" style="font-size: 10px;">git</a>
+						<a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a>
 					</div>
 				</section>
 				
@@ -153,6 +153,73 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-node" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/08/20/node/" class="article-date">
+  	<time datetime="2021-08-20T12:34:23.000Z" itemprop="datePublished">2021-08-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/20/node/">
+        node
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><blockquote>
+<p>node是js在服务器端的运行环境</p>
+<p>node不能调用浏览器的Dom,Bom元素</p>
+<p>node可以导入核心模块,自定义模块,第三方模块</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#导入方法</span><br><span class="line">const fs = require(&#x27;fs&#x27;)</span><br><span class="line"></span><br><span class="line">#导入自定义模块</span><br><span class="line">const calc = require(&#x27;./calc.js&#x27;)</span><br><span class="line">#需在被导入的模块中添加暴露方法</span><br><span class="line">modules.exprots = &#123; calc &#125;</span><br><span class="line"></span><br><span class="line">#导入第三方模块 </span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/" rel="tag">node.js</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2021/08/20/node/#more">learn more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-gitknow" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -185,7 +252,7 @@
         <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>1.在开发过程中,经常会需要对一个文件进行修改甚至删除,但是我们又会希望保存这个文件的历史记录,达到方便回退的效果,这个时候,如果通过备份,那么管理起来就会很复杂</p>
 <p>2.在多人开发时,每个人都会需要修改文件,那么修改或合并就会非常复杂.</p>
 <p>git是分布式的版本控制系统。分布式版本控制系统的客户端并不只提取最新版本的文件快照，而是把代码仓库完整地镜像下来。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。因为每一次的提取操作，实际上都是一次对代码仓库的完整备份.</p>
-<div style="height:400px;width:600px;margin:0 auto"><img src="https://z3.ax1x.com/2021/08/17/f59xPO.png"></div>
+<div style="height:400px;width:400px;margin:0 auto"><img src="https://z3.ax1x.com/2021/08/17/f59xPO.png"></div>
       
     </div>
     
