@@ -17,12 +17,10 @@
 <meta property="og:description" content="node node是js在服务器端的运行环境 node不能调用浏览器的Dom,Bom元素 node可以导入核心模块,自定义模块,第三方模块  12345678910#导入方法const fs &#x3D; require(&amp;#x27;fs&amp;#x27;)#导入自定义模块const calc &#x3D; require(&amp;#x27;.&#x2F;calc.js&amp;#x27;)#需在被导入的模块中添加暴露方法modules.expr">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-20T12:34:23.000Z">
-<meta property="article:modified_time" content="2021-08-20T12:53:27.784Z">
+<meta property="article:modified_time" content="2021-08-23T12:47:42.343Z">
 <meta property="article:author" content="深秋">
 <meta property="article:tag" content="node.js">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternative" href="/atom.xml" title="深秋" type="application/atom+xml">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -82,6 +80,10 @@
 					<nav class="header-nav">
 						<div class="social">
 							
+								<a class="github" target="_blank" href="https://github.com/lateautumn2" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="/yeluoqiushen@qq.com" title="mail">mail</a>
+					        
 						</div>
 						<!-- music -->
 						
@@ -107,16 +109,12 @@
 					
 			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/lateautumn2">github</a>
 			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="/%E4%B8%80%E4%B8%AA%E4%BB%8D%E5%9C%A8%E8%B7%AF%E4%B8%8A%E8%A1%8C%E8%B5%B0%E7%9A%84%E8%BF%87%E5%AE%A2">aboutme</a>
+			        
 			        </div>
 				</section>
 				
 
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">一个仍在路上行走的过客</div>
-				</section>
 				
 			</div>
 		</div>
@@ -151,6 +149,10 @@
 			<nav class="header-nav">
 				<div class="social">
 					
+						<a class="github" target="_blank" href="https://github.com/lateautumn2" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="/yeluoqiushen@qq.com" title="mail">mail</a>
+			        
 				</div>
 			</nav>
 		</header>				
@@ -205,6 +207,24 @@
 <span id="more"></span>
 
 <h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#npm环境配置 (文件夹名称不能是中文或者特殊字符)</span><br><span class="line">npm init --yes</span><br><span class="line"></span><br><span class="line">#npm环境配置 (文件夹名称不限制,可手动更改)</span><br><span class="line">npm init </span><br><span class="line"></span><br><span class="line">#下载第三方包</span><br><span class="line">npm install dayjs //本地路径下载</span><br><span class="line">npm install -g nrm //全局下载</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="express"><a href="#express" class="headerlink" title="express"></a>express</h2><p>express是一个简洁,灵活的node.js的web应用开发框架,本身由一个路由和无数个中间件组成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#开启一个服务器的三条代码</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">const server = express()</span><br><span class="line">server.listen(8001,()=&gt;&#123;&#125;)</span><br><span class="line"></span><br><span class="line">#路由</span><br><span class="line">server.get(&#x27;/login&#x27;,(req,res)=&gt;&#123;</span><br><span class="line">     res.send(&#x27;这是登录页面&#x27;) //express集成了请求头,会自动识别</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">#中间件使用方法</span><br><span class="line">const isok = function(req,res,next)&#123; </span><br><span class="line">//前端发起请求到后端时,后端指向中间件,由中间件先对请求进行处理,处理完成后,若有其他的中间件,则会指向下一个,没有则指向后端处理</span><br><span class="line">		next()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>托管</strong></p>
+<p>在express中,内置了一个托管静态页面的功能,如下;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#导包</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">const server = express()</span><br><span class="line"></span><br><span class="line">#开启托管</span><br><span class="line">server.use(	express.static(&#x27;/&#x27;,文件夹名)) //前缀可选填,托管文件夹必须要与当前文件同级</span><br><span class="line"></span><br><span class="line">#监听</span><br><span class="line">server.listen(8001,()=&gt;&#123;</span><br><span class="line">    console.log(&#x27;端口已开启&#x27;)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>由于项目开发过程中,接口也会配置的越来越多,所以传统的路由写法无法满足代码的优化,整洁,所以采用express所提供的路由中间件,将路由配置与路由调用分开</p>
+<p><strong>路由配置</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#导包</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">//这个就是自带的路由方法</span><br><span class="line">const Router = express.Router()</span><br><span class="line"></span><br><span class="line">//之后所有的配置就在router上</span><br><span class="line">Router.get(&#x27;/login&#x27;,(req,res)=&gt;&#123;</span><br><span class="line">     res.send(&#x27;这是登录页面&#x27;)</span><br><span class="line">&#125;)</span><br><span class="line">Router.post(&#x27;/index&#x27;,(req,res)=&gt;&#123;</span><br><span class="line">     res.send(&#x27;这是首页&#x27;)</span><br><span class="line">&#125;)</span><br><span class="line">#暴露路由函数</span><br><span class="line">module.exports = Router</span><br></pre></td></tr></table></figure>
+
+<p><strong>路由调用</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#导包</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">const Router = require(&#x27;./路由配置文件名&#x27;)</span><br><span class="line">const server =express()</span><br><span class="line"></span><br><span class="line">#调用</span><br><span class="line">server.use(&#x27;/&#x27;,Router)  //指定前缀,可填</span><br><span class="line"></span><br><span class="line">#监听</span><br><span class="line">server.listen(8001,()=&gt;&#123;</span><br><span class="line">    console.log(&#x27;端口已开启&#x27;)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h2><p>开发中由于前后端分离,数据获取并非同源,所以跨域问题非常常见</p>
+<p>而在express框架中,跨域的解决过于冗长,灵活性也不太够,所以借用cors包来解决跨域问题是极为方便的方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#导包</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">const cors = require(&#x27;cors&#x27;)</span><br><span class="line">const server = express()</span><br><span class="line"></span><br><span class="line">#开启跨域</span><br><span class="line">server.use(cors())</span><br></pre></td></tr></table></figure>
 
 
       
