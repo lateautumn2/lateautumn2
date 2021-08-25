@@ -17,7 +17,7 @@
 <meta property="og:description" content="node node是js在服务器端的运行环境 node不能调用浏览器的Dom,Bom元素 node可以导入核心模块,自定义模块,第三方模块  12345678910#导入方法const fs &#x3D; require(&amp;#x27;fs&amp;#x27;)#导入自定义模块const calc &#x3D; require(&amp;#x27;.&#x2F;calc.js&amp;#x27;)#需在被导入的模块中添加暴露方法modules.expr">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-20T12:34:23.000Z">
-<meta property="article:modified_time" content="2021-08-23T12:47:42.343Z">
+<meta property="article:modified_time" content="2021-08-25T12:46:26.183Z">
 <meta property="article:author" content="深秋">
 <meta property="article:tag" content="node.js">
 <meta name="twitter:card" content="summary">
@@ -213,7 +213,7 @@
 
 <p><strong>托管</strong></p>
 <p>在express中,内置了一个托管静态页面的功能,如下;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#导包</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">const server = express()</span><br><span class="line"></span><br><span class="line">#开启托管</span><br><span class="line">server.use(	express.static(&#x27;/&#x27;,文件夹名)) //前缀可选填,托管文件夹必须要与当前文件同级</span><br><span class="line"></span><br><span class="line">#监听</span><br><span class="line">server.listen(8001,()=&gt;&#123;</span><br><span class="line">    console.log(&#x27;端口已开启&#x27;)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#导包</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">const server = express()</span><br><span class="line"></span><br><span class="line">#开启托管</span><br><span class="line">server.use(&#x27;/&#x27;,	express.static(&#x27;文件夹名&#x27;)) //前缀可选填,托管文件夹必须要与当前文件同级</span><br><span class="line"></span><br><span class="line">#监听</span><br><span class="line">server.listen(8001,()=&gt;&#123;</span><br><span class="line">    console.log(&#x27;端口已开启&#x27;)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
 
 <p>由于项目开发过程中,接口也会配置的越来越多,所以传统的路由写法无法满足代码的优化,整洁,所以采用express所提供的路由中间件,将路由配置与路由调用分开</p>
 <p><strong>路由配置</strong></p>
