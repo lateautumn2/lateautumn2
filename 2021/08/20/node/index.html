@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="深秋">
     
+    <meta name="description" content="lateautumn">
+    
     
     
     
     
     
     <title>node | 深秋</title>
-    <link href="http://example.com" rel="prefetch" />
+    <link href="https://lateautumn.cn" rel="prefetch" />
     
     
 <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -47,7 +49,7 @@
       if (document.images) {
         var avatar = new Image();
         avatar.src = '/imgs/touxiang.jpg'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg'.split(',')
         var previewsPreLoad = []
         for(var i = 0; i < length; i++) {
           previewsPreLoad.push(new Image())
@@ -78,7 +80,7 @@
                     aria-expanded="false">
                 <span class="fa fa-lg fa-reorder"></span>
             </button>
-            <a href="http://example.com">
+            <a href="https://lateautumn.cn">
                 
                 <style>
                     #gal-header .navbar-brand {
@@ -112,16 +114,6 @@
                         <i class="fa fa-archive"></i>归档
                     </a>
                 </li>
-                
-                
-                
-                
-                <li class="">
-                    <a href="/categories">
-                        <i class="fa fa-list"></i>分类
-                    </a>
-                </li>
-                
                 
                 
                 
@@ -170,7 +162,7 @@
 <article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
-        <a href="http://example.com">深秋</a>
+        <a href="https://lateautumn.cn">深秋</a>
         >
         <span>node</span>
     </div>
@@ -219,14 +211,18 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><blockquote>
+        <p>node应该算是全栈的敲门砖吧,在往全栈的大路上又前进了一步……..</p>
+<p>复习下基础语法吧,写了忘,忘了写,总会记住的….</p>
+<span id="more"></span>
+
+<h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><blockquote>
 <p>node是js在服务器端的运行环境</p>
 <p>node不能调用浏览器的Dom,Bom元素</p>
 <p>node可以导入核心模块,自定义模块,第三方模块</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#导入方法</span><br><span class="line">const fs = require(&#x27;fs&#x27;)</span><br><span class="line"></span><br><span class="line">#导入自定义模块</span><br><span class="line">const calc = require(&#x27;./calc.js&#x27;)</span><br><span class="line">#需在被导入的模块中添加暴露方法</span><br><span class="line">modules.exprots = &#123; calc &#125;</span><br><span class="line"></span><br><span class="line">#导入第三方模块 </span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br></pre></td></tr></table></figure>
 
-<span id="more"></span>
+<!--more-->
 
 <h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#npm环境配置 (文件夹名称不能是中文或者特殊字符)</span><br><span class="line">npm init --yes</span><br><span class="line"></span><br><span class="line">#npm环境配置 (文件夹名称不限制,可手动更改)</span><br><span class="line">npm init </span><br><span class="line"></span><br><span class="line">#下载第三方包</span><br><span class="line">npm install dayjs //本地路径下载</span><br><span class="line">npm install -g nrm //全局下载</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -277,7 +273,8 @@
         <div class="author-panel text-center">
             <img src="/imgs/touxiang.jpg" width="140" height="140"
                  alt="个人头像" class="author-image">
-            <p class="author-description"></p>
+            <p class="author-description"><p>lateautumn</p>
+</p>
         </div>
     </div>
 </aside>
@@ -355,13 +352,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/08/09/my-first-blog/">这是我的第一个页面</a>
+                    <a href="/2021/08/09/hello-world/">少年剑未佩妥,便已踏入江湖</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/08/09/hello-world/">少年剑未佩妥,便已踏入江湖</a>
+                    <a href="/2021/08/09/my-first-blog/">这是我的第一个页面</a>
                 </span>
             </li>
             
@@ -386,10 +383,6 @@
                 </li>
                 
                 
-                <li>
-                    <a href="/2021/08/20/node/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
-                </li>
-                
                 
                 <li>
                     <a href="/2021/08/20/node/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
@@ -400,42 +393,22 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/git/" style="font-size: 12.364645080650455px;" class="tag-cloud-link">git</a>
+    <a href="/tags/git/" style="font-size: 16.669179921434733px;" class="tag-cloud-link">git</a>
     
-    <a href="/tags/node-js/" style="font-size: 8.486877657605632px;" class="tag-cloud-link">node.js</a>
+    <a href="/tags/node-js/" style="font-size: 19.31776928473436px;" class="tag-cloud-link">node.js</a>
     
 </div>
                 
-                
-                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
-    
-    <li>
-        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
-    </li>
-    
-    <li>
-        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
-    </li>
-    
-    <li>
-        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
-    </li>
-    
-</div>
                 
                 
                 <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
     
     <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
+        <a href="https://github.com/lateautumn2" target="_blank">Github</a>
     </li>
     
     <li>
-        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
-    </li>
-    
-    <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+        <a href="mailto:yeluoqiushen@qq.com" target="_blank">Mail</a>
     </li>
     
 </div>
@@ -534,7 +507,7 @@
     window.slideConfig = {
       prefix: '/imgs/slide/background',
       ext: 'jpg',
-      maxCount: '6'
+      maxCount: '10'
     }
 </script>
 
