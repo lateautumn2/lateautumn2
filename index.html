@@ -1,535 +1,892 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>深秋</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="深秋">
+    
+    
+    
+    
+    
+    
+    
+    <title>深秋</title>
+    <link href="http://example.com" rel="prefetch" />
 
-  <!-- keywords -->
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="深秋">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="深秋">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="深秋">
-<meta name="twitter:card" content="summary">
-  
-  
-    <link rel="icon" href="/img/favicon.ico">
-  
-  
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
 <link rel="stylesheet" href="/css/style.css">
 
-  
-  
+    
+<script src="/js/jquery.min.js"></script>
 
-  
-<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+    
+<script src="/js/bootstrap.min.js"></script>
 
-  
-<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    
+<script src="/js/aos.js"></script>
 
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
 
-  
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/touxiang.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
 <meta name="generator" content="Hexo 5.4.0"></head>
 <body>
-  <div id="container">
-    <div id="particles-js"></div>
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-				<img lazy-src="/img/pg1.jpg" class="js-avatar">
-			
-		</a>
-
-		<hgroup>
-			<h1 class="header-author"><a href="/">深秋</a></h1>
-		</hgroup>
-
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">时光轴</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="half-header-menu">
-						<a class="hide">Home</a>
-						<a>Tags</a>
-						<a>Links</a>
-						<a>About</a>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/lateautumn2" title="github">github</a>
-					        
-								<a class="mail" target="_blank" href="mailto:yeluoqiushen@qq.com" title="mail">mail</a>
-					        
-						</div>
-						<!-- music -->
-						
-							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
-							<div style="position: absolute; left: auto; width: 85%;">
-								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1842025914&auto=1&height=66"></iframe>
-							</div>
-						
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/lateautumn2">github</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="/%E4%B8%80%E4%B8%AA%E4%BB%8D%E5%9C%A8%E8%B7%AF%E4%B8%8A%E8%A1%8C%E8%B5%B0%E7%9A%84%E8%BF%87%E5%AE%A2">aboutme</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-			</div>
-		</div>
-	</header>				
-</div>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://example.com">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">深秋</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="current">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/git/">git</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/node-js/">node.js</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
     </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide"></h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="/img/pg1.jpg" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author"></h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">时光轴</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/lateautumn2" title="github">github</a>
-			        
-						<a class="mail" target="_blank" href="mailto:yeluoqiushen@qq.com" title="mail">mail</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-node" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/08/20/node/" class="article-date">
-  	<time datetime="2021-08-20T12:34:23.000Z" itemprop="datePublished">2021-08-20</time>
-</a>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<div id="article-list">
+     
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">08月</span>
+        <span class="day">20</span>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/20/node/">
-        node
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><blockquote>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2021/08/20/node/">
+                    <span>node</span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/node-js/">node.js</a>
+                
+            </span>
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2021/08/20/node/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2021/08/20/node/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview1.jpg" alt="node">
+                    </div>
+                    <div class="info">
+                        <h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><blockquote>
 <p>node是js在服务器端的运行环境</p>
 <p>node不能调用浏览器的Dom,Bom元素</p>
 <p>node可以导入核心模块,自定义模块,第三方模块</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#导入方法</span><br><span class="line">const fs = require(&#x27;fs&#x27;)</span><br><span class="line"></span><br><span class="line">#导入自定义模块</span><br><span class="line">const calc = require(&#x27;./calc.js&#x27;)</span><br><span class="line">#需在被导入的模块中添加暴露方法</span><br><span class="line">modules.exprots = &#123; calc &#125;</span><br><span class="line"></span><br><span class="line">#导入第三方模块 </span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/" rel="tag">node.js</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/2021/08/20/node/#more">learn more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-gitknow" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/08/16/gitknow/" class="article-date">
-  	<time datetime="2021-08-16T11:57:15.000Z" itemprop="datePublished">2021-08-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2021/08/20/node/">
+                        <span>node</span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2021-08-20
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            <i class="fa fa-tags"></i>
+            
+            <a href="/tags/node-js/">node.js</a>
+            
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2021/08/20/node/">
+                    
+                    <img src="/imgs/preview/preview2.jpg" alt="node">
+                </a>
+            </p>
+        </div>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/16/gitknow/">
-        gitknow
+        <div class="alert alert-gal">
+            <h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><blockquote>
+<p>node是js在服务器端的运行环境</p>
+<p>node不能调用浏览器的Dom,Bom元素</p>
+<p>node可以导入核心模块,自定义模块,第三方模块</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#导入方法</span><br><span class="line">const fs = require(&#x27;fs&#x27;)</span><br><span class="line"></span><br><span class="line">#导入自定义模块</span><br><span class="line">const calc = require(&#x27;./calc.js&#x27;)</span><br><span class="line">#需在被导入的模块中添加暴露方法</span><br><span class="line">modules.exprots = &#123; calc &#125;</span><br><span class="line"></span><br><span class="line">#导入第三方模块 </span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br></pre></td></tr></table></figure>
+        </div>
         
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>1.在开发过程中,经常会需要对一个文件进行修改甚至删除,但是我们又会希望保存这个文件的历史记录,达到方便回退的效果,这个时候,如果通过备份,那么管理起来就会很复杂</p>
-<p>2.在多人开发时,每个人都会需要修改文件,那么修改或合并就会非常复杂.</p>
-<p>git是分布式的版本控制系统。分布式版本控制系统的客户端并不只提取最新版本的文件快照，而是把代码仓库完整地镜像下来。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。因为每一次的提取操作，实际上都是一次对代码仓库的完整备份.</p>
-<div style="height:400px;width:400px;margin:0 auto"><img src="https://z3.ax1x.com/2021/08/17/f59xPO.png"></div>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/2021/08/16/gitknow/#more">learn more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-0811" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/08/13/0811/" class="article-date">
-  	<time datetime="2021-08-13T04:05:20.000Z" itemprop="datePublished">2021-08-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/13/0811/">
-        应是飞鸿踏雪泥
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>其实也不知道这个在这个博客上到底做些什么,也许会写一些学习历程,一些bug吧,但是我想更多的是随便写一点东西吧,也许今天写了学习历程,下一次就写了个小故事,再下一次说不定就发一些别处看到的有趣的东西上来………………………</p>
-<p>今天修改了图片的链接形式,hexo要想在文章内部显示图片,则需要在markdown文件下再建文件夹,实在太臃肿了,所有换成了远程图床……… 8-17</p>
-<div style = "height:600px"><img src="https://z3.ax1x.com/2021/08/17/f5RPcd.jpg" ></div>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="my-first-blogdhexo-my-first-blog" class="article article-type-my-first-blogdhexo" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/08/09/my-first-blog/" class="article-date">
-  	<time datetime="2021-08-09T09:42:16.000Z" itemprop="datePublished">2021-08-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/09/my-first-blog/">
-        这是我的第一个页面
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><del>害,不知道改写些什么,暂时抄首诗吧,后面想到了要写什么再补上</del></p>
-<center>暮晓春来迟,
-
-<center>先于百花知.
-
-<center>岁岁种桃花,
-
-<center>开在断肠时.
-
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/08/09/hello-world/" class="article-date">
-  	<time datetime="2021-08-09T03:56:31.459Z" itemprop="datePublished">2021-08-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/09/hello-world/">
-        少年剑未佩妥,便已踏入江湖
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>此博客于2021-08-09 18:08 正式运行</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2021/08/20/node/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
 </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-      <div class="footer-left">
-        &copy; 2021 深秋
-      </div>
-            <span id="sitetime"></span>
-<script language=javascript>
-	function siteTime(){
-		window.setTimeout("siteTime()", 1000);
-		var seconds = 1000;
-		var minutes = seconds * 60;
-		var hours = minutes * 60;
-		var days = hours * 24;
-		var years = days * 365;
-		var today = new Date();
-		var todayYear = today.getFullYear();
-		var todayMonth = today.getMonth()+1;
-		var todayDate = today.getDate();
-		var todayHour = today.getHours();
-		var todayMinute = today.getMinutes();
-		var todaySecond = today.getSeconds();
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">08月</span>
+        <span class="day">16</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2021/08/16/gitknow/">
+                    <span>gitknow</span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/git/">git</a>
+                
+            </span>
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2021/08/16/gitknow/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2021/08/16/gitknow/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview3.jpg" alt="gitknow">
+                    </div>
+                    <div class="info">
+                        <p>这是一个测试看看会出现什么</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2021/08/16/gitknow/">
+                        <span>gitknow</span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2021-08-16
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            <i class="fa fa-tags"></i>
+            
+            <a href="/tags/git/">git</a>
+            
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2021/08/16/gitknow/">
+                    
+                    <img src="/imgs/preview/preview3.jpg" alt="gitknow">
+                </a>
+            </p>
+        </div>
+        
+        <div class="alert alert-gal">
+            <p>这是一个测试看看会出现什么</p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2021/08/16/gitknow/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">08月</span>
+        <span class="day">13</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2021/08/13/0811/">
+                    <span>应是飞鸿踏雪泥</span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2021/08/13/0811/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2021/08/13/0811/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview2.jpg" alt="应是飞鸿踏雪泥">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2021/08/13/0811/">
+                        <span>应是飞鸿踏雪泥</span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2021-08-13
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2021/08/13/0811/">
+                    
+                    <img src="/imgs/preview/preview2.jpg" alt="应是飞鸿踏雪泥">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2021/08/13/0811/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">08月</span>
+        <span class="day">09</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2021/08/09/my-first-blog/">
+                    <span>这是我的第一个页面</span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2021/08/09/my-first-blog/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2021/08/09/my-first-blog/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview1.jpg" alt="这是我的第一个页面">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2021/08/09/my-first-blog/">
+                        <span>这是我的第一个页面</span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2021-08-09
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2021/08/09/my-first-blog/">
+                    
+                    <img src="/imgs/preview/preview2.jpg" alt="这是我的第一个页面">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2021/08/09/my-first-blog/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">08月</span>
+        <span class="day">09</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2021/08/09/hello-world/">
+                    <span>少年剑未佩妥,便已踏入江湖</span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2021/08/09/hello-world/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2021/08/09/hello-world/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview2.jpg" alt="少年剑未佩妥,便已踏入江湖">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2021/08/09/hello-world/">
+                        <span>少年剑未佩妥,便已踏入江湖</span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2021-08-09
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2021/08/09/hello-world/">
+                    
+                    <img src="/imgs/preview/preview4.jpg" alt="少年剑未佩妥,便已踏入江湖">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2021/08/09/hello-world/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+</div>
+<!-- 前方最多7个 < 1 2 3 4 5 6 -->
+<!-- 前方超过第7页则分为 < 1 ... (n - 3) (n - 2) (n - 1) n, 此时前面为固定的6个 -->
 
-		var t1 = Date.UTC(2021,08,09,18,08,08); 
-		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
-		var diff = t2-t1;
-		var diffYears = Math.floor(diff/years);
-		var diffDays = Math.floor((diff/days)-diffYears*365);
-		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
-	}
-	siteTime();
-</script>
-        <div class="footer-right">
-          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+<!-- 后方最多8个 (n + 1) 到 (n + 7) > -->
+<!-- 如果末页和当前页相差超过7, 此时后面为固定的6个, (n + 1) (n + 2) (n + 3) ... total > -->
+
+
+
+<div id="gal-pagination" class="clearfix">
+    <ul class="pagination pagination-gal pull-right">
+        
+        
+        
+        
+        <li class="current">
+            <span>1</span>
+        </li>
+        
+        
+        
+        
+    </ul>
+</div>
+
+<!-- 加上这段代码原因： gitment在首页加载时, 如果找不到对应的控件会报错，此处加上，同时设置为none，防止报错 -->   
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            深秋
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/touxiang.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
         </div>
     </div>
-  </div>
-</footer>
-    </div>
+</aside>
     
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/20/node/">node</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/16/gitknow/">gitknow</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/13/0811/">应是飞鸿踏雪泥</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/09/my-first-blog/">这是我的第一个页面</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/09/hello-world/">少年剑未佩妥,便已踏入江湖</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/13/0811/">应是飞鸿踏雪泥</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/09/my-first-blog/">这是我的第一个页面</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/16/gitknow/">gitknow</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/09/hello-world/">少年剑未佩妥,便已踏入江湖</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/20/node/">node</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
 
+                
+                <li>
+                    <a href="/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/git/" style="font-size: 8.593006335074413px;" class="tag-cloud-link">git</a>
+    
+    <a href="/tags/node-js/" style="font-size: 19.417423685261287px;" class="tag-cloud-link">node.js</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 深秋 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
 
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
 
 <script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: false,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
 </script>
 
-<script src="/js/main.js"></script>
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
 
 
 
 
-  </div>
-</body>
 </html>
