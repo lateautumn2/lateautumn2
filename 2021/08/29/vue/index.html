@@ -132,11 +132,11 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/vue/">vue</a>
+                            <a href="/tags/node-js/">node.js</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/node-js/">node.js</a>
+                            <a href="/tags/vue/">vue</a>
                         </li>
                         
                         
@@ -219,6 +219,19 @@
 <p>MVVM的设计模式,通过数据驱动视图改变,通过vue内部源码操作Dom元素,达到不操作Dom,只改变数据,来达到页面变化</p>
 <p>—-08.29  am</p>
 <span id="more"></span>
+
+<h2 id="vue环境配置"><a href="#vue环境配置" class="headerlink" title="vue环境配置"></a>vue环境配置</h2><blockquote>
+<p>工程化开发方式(webpack环境下)</p>
+<p>@vue/cli是vue官方提供的一个全局模块包</p>
+<p>vue create vuecli-demo 创建一个vue项目</p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//定位至创建的文件夹</span><br><span class="line"><span class="built_in">cd</span> vuecli-demo</span><br><span class="line">//开启项目服务器</span><br><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+
+<h3 id="vue-cli-脚手架目录"><a href="#vue-cli-脚手架目录" class="headerlink" title="@vue/cli 脚手架目录"></a>@vue/cli 脚手架目录</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">vuecil-demo        # 项目目录</span><br><span class="line">   ├── node_modules # 项目依赖的第三方包</span><br><span class="line">   ├── public       # 静态文件目录</span><br><span class="line">     ├── favicon.ico# 浏览器小图标</span><br><span class="line">     └── index.html # 单页面的html文件(网页浏览的是它)</span><br><span class="line">   ├── src          # 业务文件夹</span><br><span class="line">     ├── assets     # 静态资源</span><br><span class="line">       └── logo.png # vue的logo图片</span><br><span class="line">     ├── components # 组件目录</span><br><span class="line">       └── HelloWorld.vue # 欢迎页面vue代码文件 </span><br><span class="line">     ├── App.vue    # 整个应用的根组件</span><br><span class="line">     └── main.js    # 入口js文件</span><br><span class="line">   ├── .gitignore   # git提交忽略配置</span><br><span class="line">   ├── babel.config.js  # babel配置</span><br><span class="line">   ├── package.json  # 依赖包列表</span><br><span class="line">   ├── README.<span class="built_in">md</span>    # 项目说明</span><br><span class="line">└── yarn.lock    # 项目包版本锁定和缓存地址</span><br></pre></td></tr></table></figure>
+
+<h4 id="主要文件及功能"><a href="#主要文件及功能" class="headerlink" title="主要文件及功能"></a>主要文件及功能</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node_modules       <span class="comment">//下载的第三方包</span></span><br><span class="line">public/index.html  <span class="comment">//浏览器运行的网页</span></span><br><span class="line">src/main.js        <span class="comment">//webpack打包的入口文件</span></span><br><span class="line">src/App.vue        <span class="comment">//vue项目入口页面</span></span><br><span class="line">package.json       <span class="comment">//依赖包列表文件</span></span><br></pre></td></tr></table></figure>
+
+
     </div>
 </article>
 
@@ -320,6 +333,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2021/08/13/0811/">应是飞鸿踏雪泥</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2021/08/09/hello-world/">少年剑未佩妥,便已踏入江湖</a>
                 </span>
             </li>
@@ -332,6 +351,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2021/08/20/node/">node</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2021/08/09/my-first-blog/">这是我的第一个页面</a>
                 </span>
             </li>
@@ -339,18 +364,6 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2021/08/29/vue/">vue</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2021/08/20/node/">node</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2021/08/13/0811/">应是飞鸿踏雪泥</a>
                 </span>
             </li>
             
@@ -379,11 +392,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/git/" style="font-size: 14.403909274837428px;" class="tag-cloud-link">git</a>
+    <a href="/tags/git/" style="font-size: 13.266858681253257px;" class="tag-cloud-link">git</a>
     
-    <a href="/tags/vue/" style="font-size: 13.759769897309631px;" class="tag-cloud-link">vue</a>
+    <a href="/tags/node-js/" style="font-size: 19.29435089587726px;" class="tag-cloud-link">node.js</a>
     
-    <a href="/tags/node-js/" style="font-size: 19.267289173642673px;" class="tag-cloud-link">node.js</a>
+    <a href="/tags/vue/" style="font-size: 13.273486048990545px;" class="tag-cloud-link">vue</a>
     
 </div>
                 
