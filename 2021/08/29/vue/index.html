@@ -231,6 +231,106 @@
 
 <h4 id="主要文件及功能"><a href="#主要文件及功能" class="headerlink" title="主要文件及功能"></a>主要文件及功能</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node_modules       <span class="comment">//下载的第三方包</span></span><br><span class="line">public/index.html  <span class="comment">//浏览器运行的网页</span></span><br><span class="line">src/main.js        <span class="comment">//webpack打包的入口文件</span></span><br><span class="line">src/App.vue        <span class="comment">//vue项目入口页面</span></span><br><span class="line">package.json       <span class="comment">//依赖包列表文件</span></span><br></pre></td></tr></table></figure>
 
+<p>若要在脚手架中配置自定义配置,则需在src同级目录下添加vue.config.js文件,基础配置如下;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">lintOnSave:false,  //关闭代码检查工具=&gt;eslint组件</span><br><span class="line">devServer:&#123;</span><br><span class="line">  open: true,  //设置自动打开浏览器</span><br><span class="line">  port:3000   //设置默认打开端口号</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="vue基础语法"><a href="#vue基础语法" class="headerlink" title="vue基础语法"></a>vue基础语法</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>    //template文件中只能有一个根文件</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">data () &#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">//默认方法,用于定义template中使用的变量</span></span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;,</span></span><br><span class="line"><span class="javascript"><span class="attr">method</span>:&#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">//用于定义template中使用的函数</span></span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="vue基础指令"><a href="#vue基础指令" class="headerlink" title="vue基础指令"></a>vue基础指令</h4><ol>
+<li><p>v-bind</p>
+<ul>
+<li><p>语法:<code>v-bind:属性名=&quot;vue变量&quot;</code></p>
+</li>
+<li><p>简写: <code>:属性名=&quot;变量名&quot;</code></p>
+<blockquote>
+<p>将原生元素属性转化成vue属性,得以使用vue方法</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>v-on</p>
+<ul>
+<li>语法<ul>
+<li>v-on:事件名=”要执行的==少量代码==”</li>
+<li>v-on:事件名=”methods中的函数”</li>
+<li>v-on:事件名=”methods中的函数(实参)” </li>
+</ul>
+</li>
+<li>简写<ul>
+<li>@事件名=”methods中的函数”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>v-on修饰符</p>
+<ul>
+<li>语法:<ul>
+<li>@事件名.修饰符=”methods里函数”<ul>
+<li>.stop - 阻止事件冒泡</li>
+<li>.prevent - 阻止默认行为</li>
+<li>.once - 程序运行期间, 只触发一次事件处理函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>v-on按键修饰符</p>
+<ul>
+<li>语法:<ul>
+<li>@keyup.enter  -  监测回车按键</li>
+<li>@keyup.esc     -   监测返回按键</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>v-model</p>
+<ul>
+<li>语法: v-model=”vue数据变量”</li>
+<li>双向数据绑定<ul>
+<li>数据变化 -&gt; 视图自动同步</li>
+<li>视图变化 -&gt; 数据自动同步</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>v-text和v-html</p>
+<ul>
+<li>语法:<ul>
+<li>v-text=”vue数据变量”    </li>
+<li>v-html=”vue数据变量”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>v-show和v-if</p>
+<ul>
+<li>语法:<ul>
+<li>v-show=”vue变量”            </li>
+<li>v-if=”vue变量” </li>
+</ul>
+</li>
+<li>原理<ul>
+<li>v-show 用的display:none隐藏   (频繁切换使用)</li>
+<li>v-if  直接从DOM树上移除</li>
+</ul>
+</li>
+<li>高级<ul>
+<li>v-else使用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>v-for</p>
+<ul>
+<li>语法<ul>
+<li>v-for=”(值, 索引) in 目标结构”</li>
+<li>v-for=”值 in 目标结构”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 
     </div>
 </article>
@@ -339,25 +439,25 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/08/09/hello-world/">少年剑未佩妥,便已踏入江湖</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
                     <a href="/2021/08/16/gitknow/">gitknow</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/08/20/node/">node</a>
+                    <a href="/2021/08/09/hello-world/">少年剑未佩妥,便已踏入江湖</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2021/08/09/my-first-blog/">这是我的第一个页面</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/08/20/node/">node</a>
                 </span>
             </li>
             
@@ -392,11 +492,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/git/" style="font-size: 13.266858681253257px;" class="tag-cloud-link">git</a>
+    <a href="/tags/git/" style="font-size: 16.082998139772176px;" class="tag-cloud-link">git</a>
     
-    <a href="/tags/node-js/" style="font-size: 19.29435089587726px;" class="tag-cloud-link">node.js</a>
+    <a href="/tags/node-js/" style="font-size: 15.85143484724146px;" class="tag-cloud-link">node.js</a>
     
-    <a href="/tags/vue/" style="font-size: 13.273486048990545px;" class="tag-cloud-link">vue</a>
+    <a href="/tags/vue/" style="font-size: 16.77933171588767px;" class="tag-cloud-link">vue</a>
     
 </div>
                 
