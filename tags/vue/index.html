@@ -12,7 +12,7 @@
     
     
     
-    <title>gitknow | 深秋</title>
+    <title>tags: vue | 深秋</title>
     <link href="https://lateautumn.cn" rel="prefetch" />
     
     
@@ -162,34 +162,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    
-<article class="article well article-body" id="article">
+                    <article class="article well article-body" id="article-tag">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://lateautumn.cn">深秋</a>
         >
-        <span>gitknow</span>
+        <span>标签</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2021/08/16/gitknow/">gitknow</a>
+                <a href="/tags/vue/index.html">vue</a>
             </h1>
-        </div>
-        <div class="tag-article">
-            
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/git/">git</a>
-                
-            </span>
-            
-            <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2021-08-16
-            </span>
-            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -197,50 +182,21 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2021/08/16/gitknow/">gitknow</a>
+                    <a href="/tags/vue/index.html">vue</a>
                 </h4>
             </div>
-            <p>
-                <i class="fa fa-calendar"></i> 2021-08-16
-            </p>
-            <p>
-                
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/git/">git</a>
-                
-                
-                
-            </p>
         </center>
     </div>
-    <div class="content-article">
-        <p> Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 <br/></p>
-<p>想删除某段代码,又担心会出bug,那么git会记录你每次的改动,每次的迭代都会有版本,方便回退.</p>
-<span id="more"></span>
-
-<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>1.在开发过程中,经常会需要对一个文件进行修改甚至删除,但是我们又会希望保存这个文件的历史记录,达到方便回退的效果,这个时候,如果通过备份,那么管理起来就会很复杂</p>
-<p>2.在多人开发时,每个人都会需要修改文件,那么修改或合并就会非常复杂.</p>
-<p>git是分布式的版本控制系统。分布式版本控制系统的客户端并不只提取最新版本的文件快照，而是把代码仓库完整地镜像下来。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。因为每一次的提取操作，实际上都是一次对代码仓库的完整备份.</p>
-<div style="height:400px;width:400px;margin:0 auto"><img src="https://z3.ax1x.com/2021/08/17/f59xPO.png"></div>
-
-<h2 id="git-环境配置"><a href="#git-环境配置" class="headerlink" title="git 环境配置"></a>git 环境配置</h2><p>如果是第一次使用,则需要配置用户名与邮箱</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git config  user.name 你的目标用户名</span></span><br><span class="line"><span class="comment"># git config  user.email 你的目标邮箱名</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用--global参数，配置全局的用户名和邮箱，只需要配置一次即可。推荐配置github的用户名和密码</span></span><br><span class="line">git config --global user.name <span class="string">&#x27;自己的用户名&#x27;</span></span><br><span class="line">git config  --global user.email <span class="string">&#x27;自己的正确的邮箱&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看配置信息</span></span><br><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-
-<h2 id="git基础指令"><a href="#git基础指令" class="headerlink" title="git基础指令"></a>git基础指令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#初始化git仓库</span></span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line"><span class="comment">#将index.html文件提交至暂存区</span></span><br><span class="line">git add index.html</span><br><span class="line"></span><br><span class="line"><span class="comment">#将css文件下所有文件提价至暂存区</span></span><br><span class="line">git add css</span><br><span class="line"></span><br><span class="line"><span class="comment">#将目录下所有文件提交至暂存区</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看文件信息</span></span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment">#将暂存区的文件提交至仓库区</span></span><br><span class="line">git commit -m <span class="string">&#x27;提交信息&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#修改上一次提交信息</span></span><br><span class="line">git commit --amend -m</span><br><span class="line"></span><br><span class="line"><span class="comment">#简略查看所有上传日志(不包括已回退的版本)</span></span><br><span class="line">git <span class="built_in">log</span> --oneline</span><br><span class="line"></span><br><span class="line"><span class="comment">#简略查看所有上传日志(包括已回退的版本)</span></span><br><span class="line">git rflog --oneline</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看工作区与暂存区代码的不同</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看暂存区与仓库区代码的不同</span></span><br><span class="line">git diff --cached</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看工作区与仓库区代码的不同</span></span><br><span class="line">git diff --HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看两个版本之前代码的不同</span></span><br><span class="line">git diff xf2222 xf2223</span><br><span class="line"></span><br><span class="line"><span class="comment">#将代码回退至指定版本号</span></span><br><span class="line">git diff --hard xf2222</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建新分区</span></span><br><span class="line">git branch 分支名称</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看分区详情</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除指定分区(不能在当前分区删除当前分区)</span></span><br><span class="line">git branch -d 分区名</span><br><span class="line"></span><br><span class="line"><span class="comment">#切换至指定分区</span></span><br><span class="line">git checkout 分区名</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建分区同时切换至此分区</span></span><br><span class="line">git checkout -b 分区名</span><br><span class="line"></span><br><span class="line"><span class="comment">#合并其他分支至此分区</span></span><br><span class="line">git merge 分支名</span><br><span class="line"></span><br><span class="line"><span class="comment">#上传本地文件至远程服务器</span></span><br><span class="line">git push 远程服务器地址 分支名</span><br><span class="line"></span><br><span class="line"><span class="comment">#克隆远程服务器文件至本地</span></span><br><span class="line">git <span class="built_in">clone</span> 远程服务器地址 本地文件夹名</span><br><span class="line"></span><br><span class="line"><span class="comment">#从远程服务器拉取文件至本地(后续只会拉取与本地有差异的文件)</span></span><br><span class="line">git pull 远程服务器地址</span><br></pre></td></tr></table></figure>
-
-<h2 id="git忽视文件"><a href="#git忽视文件" class="headerlink" title="git忽视文件"></a>git忽视文件</h2><blockquote>
-<p>.gitignore 名字放在此文件夹中的文件,不会被git跟踪,也不会被上传</p>
-<p>idea.html : 忽视idea.html文件</p>
-<p>css : 忽视css文件夹</p>
-<p>css/index.css : 忽视css文件夹下的index.css文件</p>
-<p>css/*.css : 忽视css文件夹下所有css文件</p>
-</blockquote>
-
+    <div class="content-article" style="margin-top: 30px;">
+        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
+            
+            <a href="/2021/08/29/vue/">vue</a>
+            <br>
+            
+            
+        </div>
     </div>
 </article>
-
-
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -383,13 +339,13 @@
 
                 
                 <li>
-                    <a href="/2021/08/16/gitknow/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/tags/vue/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 
                 <li>
-                    <a href="/2021/08/16/gitknow/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/tags/vue/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -397,11 +353,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/git/" style="font-size: 8.938309659717493px;" class="tag-cloud-link">git</a>
+    <a href="/tags/git/" style="font-size: 18.863030079003583px;" class="tag-cloud-link">git</a>
     
-    <a href="/tags/vue/" style="font-size: 17.801428902948146px;" class="tag-cloud-link">vue</a>
+    <a href="/tags/vue/" style="font-size: 11.84531745214688px;" class="tag-cloud-link">vue</a>
     
-    <a href="/tags/node-js/" style="font-size: 8.124076528793701px;" class="tag-cloud-link">node.js</a>
+    <a href="/tags/node-js/" style="font-size: 13.108702443296025px;" class="tag-cloud-link">node.js</a>
     
 </div>
                 
