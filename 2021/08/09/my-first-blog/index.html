@@ -21,10 +21,18 @@
 <link rel="stylesheet" href="/css/style.css">
 
     
+<link rel="stylesheet" href="/css/APlayer.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
 <script src="/js/jquery.min.js"></script>
 
     
 <script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/APlayer.min.js"></script>
 
     
 <script src="/js/aos.js"></script>
@@ -140,13 +148,17 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/vue/">vue</a>
+                            <a href="/tags/Aplayer/">Aplayer</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/node-js/">node.js</a>
+                            <a href="/tags/vue/">vue</a>
                         </li>
                         
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
                         
                         
                     </ul>
@@ -273,6 +285,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2021/08/30/musiccase/">音乐播放器插件</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2021/08/29/vue/">vue</a>
                 </span>
             </li>
@@ -314,52 +332,21 @@
     
     <aside id="sidebar-rand_posts">
     <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            随机文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2021/08/13/0811/">应是飞鸿踏雪泥</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2021/08/09/hello-world/">少年剑未佩妥,便已踏入江湖</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2021/08/16/gitknow/">gitknow</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2021/08/09/my-first-blog/">这是我的第一个页面</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2021/08/29/vue/">vue</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2021/08/20/node/">node</a>
-                </span>
-            </li>
-            
-        </ul>
+        <div id="aplayer"></div>
+<script>
+//这里本来是随机文章功能,现在已经移除,修改为音乐播放器插件功能
+ const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    audio: [{
+        name: '缘她',
+        artist: '叶里',
+        url: 'http://music.163.com/song/media/outer/url?id=1865165968.mp3',
+        cover: 'http://p2.music.126.net/FBqnJq7RRtlpmfLuH2DwVw==/109951166239680703.jpg',
+        preload: 'auto',
+        autoplay: true
+    }]
+});
+</script>
     </div>
 </aside>
     
@@ -384,11 +371,13 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/git/" style="font-size: 15.576587000028319px;" class="tag-cloud-link">git</a>
+    <a href="/tags/git/" style="font-size: 12.214284904879833px;" class="tag-cloud-link">git</a>
     
-    <a href="/tags/vue/" style="font-size: 16.72433266344402px;" class="tag-cloud-link">vue</a>
+    <a href="/tags/Aplayer/" style="font-size: 19.706786049518232px;" class="tag-cloud-link">Aplayer</a>
     
-    <a href="/tags/node-js/" style="font-size: 16.38896226115047px;" class="tag-cloud-link">node.js</a>
+    <a href="/tags/vue/" style="font-size: 10.886894631065331px;" class="tag-cloud-link">vue</a>
+    
+    <a href="/tags/node-js/" style="font-size: 19.824908571796566px;" class="tag-cloud-link">node.js</a>
     
 </div>
                 
