@@ -183,6 +183,36 @@
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
                     
+<div class="alert well fade in" id="gal-issue" role="alert">
+    <!-- TODO 添加关闭公告框功能 -->
+    <button type="button" class="close" data-dismiss="alert"></button>
+    <!-- 这里自行配置公告内容 -->
+     <p style=" font-weight:700;text-align: center;font-size:28px">落花不过身外客,流水从来是凉薄</p>
+    <!-- 自行配置公告内容结束 -->
+</div>
+<script>
+let arr=[
+    '"落花不过身外客,流水从来是凉薄"',
+    '"十里寒塘路,烟花一半醒"',
+    '"取次花丛懒回顾，半缘修道半缘君"',
+    '"花径不曾缘客扫,蓬门今始为君开"',
+    '"醉后不知天在水,满船清梦压星河"',
+    '"且将新火试新茶，诗酒趁年华"',
+    '"小楼一夜听春雨,深巷明朝卖杏花"',
+    '"风住尘香花已尽,日晚倦梳头。物是人非事事休，欲语泪先流"',
+    '"任他明月来相照,敛尽芳心不向人"',
+    '"若非群玉山头见,会向瑶台月下逢"'
+]
+//这是添加的随机诗句功能,后续封装
+function edit(){
+let index = Math.round(Math.random()*10)
+console.log(index);
+document.querySelector('.alert p').innerText = arr[index]
+}
+edit()
+
+</script>
+
 <div id="article-list">
      
             <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
@@ -223,7 +253,7 @@
                 <a href="/2021/08/30/musiccase/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview5.jpg" alt="音乐播放器插件">
+                        <img src="/imgs/preview/preview4.jpg" alt="音乐播放器插件">
                     </div>
                     <div class="info">
                         <p>去年今日此门中<br>人面桃花相印红<br>人面不知何处去<br>桃花依旧笑春风</p>
@@ -262,7 +292,7 @@
             <p style="text-align: center;">
                 <a href="/2021/08/30/musiccase/">
                     
-                    <img src="/imgs/preview/preview2.jpg" alt="音乐播放器插件">
+                    <img src="/imgs/preview/preview7.jpg" alt="音乐播放器插件">
                 </a>
             </p>
         </div>
@@ -315,7 +345,7 @@
                 <a href="/2021/09/04/api/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview7.jpg" alt="vue组件">
+                        <img src="/imgs/preview/preview2.jpg" alt="vue组件">
                     </div>
                     <div class="info">
                         <p>组件化:封装的思想,把页面上可重用的部分,封装为组件,从而方便项目的开发和维护<br>一个页面,可以拆分成一个个组件,一个组件就是一个整体,每个组件都可以有自己独立的结构样式和行为</p>
@@ -354,7 +384,7 @@
             <p style="text-align: center;">
                 <a href="/2021/09/04/api/">
                     
-                    <img src="/imgs/preview/preview3.jpg" alt="vue组件">
+                    <img src="/imgs/preview/preview10.jpg" alt="vue组件">
                 </a>
             </p>
         </div>
@@ -406,7 +436,7 @@
                 <a href="/2021/08/29/vue/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview9.jpg" alt="vue">
+                        <img src="/imgs/preview/preview3.jpg" alt="vue">
                     </div>
                     <div class="info">
                         <p>vue是一个渐进式javascript框架,更快的处理速度,更省时间的代码工程</p>
@@ -447,7 +477,7 @@
             <p style="text-align: center;">
                 <a href="/2021/08/29/vue/">
                     
-                    <img src="/imgs/preview/preview3.jpg" alt="vue">
+                    <img src="/imgs/preview/preview8.jpg" alt="vue">
                 </a>
             </p>
         </div>
@@ -501,7 +531,7 @@
                 <a href="/2021/08/20/node/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview6.jpg" alt="node">
+                        <img src="/imgs/preview/preview1.jpg" alt="node">
                     </div>
                     <div class="info">
                         <p>node应该算是全栈的敲门砖吧,在往全栈的大路上又前进了一步……..</p>
@@ -541,7 +571,7 @@
             <p style="text-align: center;">
                 <a href="/2021/08/20/node/">
                     
-                    <img src="/imgs/preview/preview1.jpg" alt="node">
+                    <img src="/imgs/preview/preview8.jpg" alt="node">
                 </a>
             </p>
         </div>
@@ -594,7 +624,7 @@
                 <a href="/2021/08/16/gitknow/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview6.jpg" alt="gitknow">
+                        <img src="/imgs/preview/preview9.jpg" alt="gitknow">
                     </div>
                     <div class="info">
                         <p> Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 <br/></p>
@@ -634,7 +664,7 @@
             <p style="text-align: center;">
                 <a href="/2021/08/16/gitknow/">
                     
-                    <img src="/imgs/preview/preview10.jpg" alt="gitknow">
+                    <img src="/imgs/preview/preview9.jpg" alt="gitknow">
                 </a>
             </p>
         </div>
@@ -714,7 +744,7 @@
             <p style="text-align: center;">
                 <a href="/2021/08/13/0811/">
                     
-                    <img src="/imgs/preview/preview9.jpg" alt="应是飞鸿踏雪泥">
+                    <img src="/imgs/preview/preview10.jpg" alt="应是飞鸿踏雪泥">
                 </a>
             </p>
         </div>
@@ -759,7 +789,7 @@
                 <a href="/2021/08/09/my-first-blog/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview4.jpg" alt="这是我的第一个页面">
+                        <img src="/imgs/preview/preview6.jpg" alt="这是我的第一个页面">
                     </div>
                     <div class="info">
                         <p><del>害,不知道改写些什么,暂时抄首诗吧,后面想到了要写什么再补上</del></p>
@@ -793,7 +823,7 @@
             <p style="text-align: center;">
                 <a href="/2021/08/09/my-first-blog/">
                     
-                    <img src="/imgs/preview/preview2.jpg" alt="这是我的第一个页面">
+                    <img src="/imgs/preview/preview4.jpg" alt="这是我的第一个页面">
                 </a>
             </p>
         </div>
@@ -838,7 +868,7 @@
                 <a href="/2021/08/09/hello-world/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview10.jpg" alt="少年剑未佩妥,便已踏入江湖">
+                        <img src="/imgs/preview/preview7.jpg" alt="少年剑未佩妥,便已踏入江湖">
                     </div>
                     <div class="info">
                         <p>此博客于2021-08-09 18:08 正式运行</p>
@@ -872,7 +902,7 @@
             <p style="text-align: center;">
                 <a href="/2021/08/09/hello-world/">
                     
-                    <img src="/imgs/preview/preview10.jpg" alt="少年剑未佩妥,便已踏入江湖">
+                    <img src="/imgs/preview/preview5.jpg" alt="少年剑未佩妥,便已踏入江湖">
                 </a>
             </p>
         </div>
@@ -1052,13 +1082,13 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/vue/" style="font-size: 14.87828173869859px;" class="tag-cloud-link">vue</a>
+    <a href="/tags/vue/" style="font-size: 14.79604659225091px;" class="tag-cloud-link">vue</a>
     
-    <a href="/tags/git/" style="font-size: 13.463559822777734px;" class="tag-cloud-link">git</a>
+    <a href="/tags/git/" style="font-size: 19.155357820877768px;" class="tag-cloud-link">git</a>
     
-    <a href="/tags/Aplayer/" style="font-size: 8.24230273310937px;" class="tag-cloud-link">Aplayer</a>
+    <a href="/tags/Aplayer/" style="font-size: 18.992165458378306px;" class="tag-cloud-link">Aplayer</a>
     
-    <a href="/tags/node-js/" style="font-size: 10.407355206054474px;" class="tag-cloud-link">node.js</a>
+    <a href="/tags/node-js/" style="font-size: 19.06081903974868px;" class="tag-cloud-link">node.js</a>
     
 </div>
                 
