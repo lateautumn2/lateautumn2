@@ -18,6 +18,21 @@ document.querySelector('.well>p').innerText = arr[index]
 }
 
 function get(){
+console.log(
+            '我走過山時，山不說話;'
+           )
+console.log(
+            '我路過海時，海不說話;'
+           )
+console.log(
+            '小毛驢滴滴答答,倚天劍伴我走天涯;'
+           )
+console.log(
+            '大家都說我因為愛着楊過大俠,才在峨嵋山上出了家;'
+           )
+console.log(
+            '其實我只是愛上了峨嵋山上的雲和霞,像極了十六歲那年的煙花'
+           )
     $.ajax({
         type:'get',
         url:'https://api.tianapi.com/txapi/verse/index',
