@@ -33,6 +33,7 @@
   var cdSlideShow = $('.cb-slideshow')
   cdSlideShow.find('span').each(function (i, span) {
     $(this).css('backgroundImage', "url('" + prefix + slideList[i] + ext + "')")
+    // console.log(prefix, slideList[i], ext)
   })
 
   // ------- 处理背景图结束 -----------
